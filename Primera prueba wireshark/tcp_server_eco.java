@@ -35,7 +35,8 @@ class tcp_server_eco
 				}
 				newsockfd.close();
 			}
-		} catch (Exception e)
+		}
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}

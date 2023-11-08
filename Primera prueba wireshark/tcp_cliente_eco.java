@@ -23,6 +23,7 @@ public class tcp_cliente_eco
 					new OutputStreamWriter(sockfd.getOutputStream())),true);
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
 			String userInput; // Entrada por teclado
+			
 			while ((userInput = stdIn.readLine()) != null)
 			{
 				if (userInput.equals("."))
@@ -30,6 +31,7 @@ public class tcp_cliente_eco
 				out.println(userInput); // escribo socket
 				System.out.println("echo: " + in.readLine()); // leo socket
 			}
+			
 			out.close();
 			in.close();
 			stdIn.close();
