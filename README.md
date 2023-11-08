@@ -1,2 +1,5 @@
 # Practica_2_Redes_Cliente_Servidor
-Para practica de redes
+Repositorio para practica de redes
+
+### Fecha de entrega
+`22 de Noviembre presentacion e informe`
