@@ -1,4 +1,3 @@
-package client;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,15 +7,18 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-public class ClientUDP {
-	public static void main(String[] args) throws IOException {
+public class ClientUDP
+{
+	public static void main(String[] args) throws IOException
+	{
 		String serverName = ""; //direccion local
-		int serverPort = ""; //direccion puerto
+		int serverPort = 0; //direccion puerto
 		DatagramSocket serviceSocket = null;
 		InetAddress serverAddress = null;
 		DatagramPacket recivePacket = null;
 		
-		try	{
+		try
+		{
 			/*crear socket*/
 			serviceSocket = new DatagramSocket();
 			serverAddress = InetAddress.getByName(serverName);
@@ -30,7 +32,7 @@ public class ClientUDP {
 		System.out.println("Introduce el puerto del Servidor: ");
 		String puertoN = stdIn.readLine();
 		serverPort = Integer.parseInt(puertoN);
-		System.out.println("Introduzca un texto a enviar (END-UDP para acabar)");
+		System.out.println("Introduzca un texto a enviar (FIN para acabar)");
 		String userInput;
 		userInput = stdIn.readLine(); /*CADENA ALMACENADA EN userInput*/
 		/* Comprobar si el usuario quiere terminar servicio*/
@@ -62,7 +64,7 @@ public class ClientUDP {
 			byte[] contenido = recivePacket.getData();
 			String line = new String(contenido);
 			System.out.println("echo: " + line);
-			System.out.println("Introduzca un texto a enviar (END-UDP para acabar)");
+			System.out.println("Introduzca un texto a enviar (FIN para acabar)");
 			userInput = stdIn.readLine();
 		}
 		System.out.println("STATUS: Closing lient");
