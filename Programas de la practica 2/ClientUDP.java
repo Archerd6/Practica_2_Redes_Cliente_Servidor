@@ -33,12 +33,12 @@ public class ClientUDP
 		/* INICIALIZA ENTRADA POR TECLADO */
 		BufferedReader stdIn = new BufferedReader( new InputStreamReader(System.in));
 		
-		System.out.println("Introduzca un texto a enviar (FIN para acabar)");
+		System.out.println("Introduzca un texto a enviar (END para acabar)");
 		String userInput;
 		userInput = stdIn.readLine(); /* Cadena almacenada en "userInput" */
 		
 		/* Comprobar si el usuario quiere terminar servicio */
-		while (userInput.compareTo("END-UDP") != 0)
+		while (userInput.compareTo("END") != 0)
 		{
 			/* Crear datagrama con la cadena escrito en el cuerpo */
 			byte[] bytesToSend = userInput.getBytes();
@@ -72,9 +72,10 @@ public class ClientUDP
 			byte[] contenido = recivePacket.getData();
 			String line = new String(contenido);
 			System.out.println("echo: " + line);
-			System.out.println("Introduzca un texto a enviar (FIN para acabar)");
+			System.out.println("Introduzca un texto a enviar (END para acabar)");
 			userInput = stdIn.readLine();
 		}
+		
 		System.out.println("STATUS: Closing lient");
 		
 		// Cerrar socket cliente
