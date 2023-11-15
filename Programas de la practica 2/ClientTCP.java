@@ -1,12 +1,11 @@
-
 import java.io.*;
 import java.net.*;
 
 public class ClientTCP {
 
 	public static void main(String[] args) throws IOException {
-		String serverName = "";
-		int portNumber = "";
+		String serverName = "localhost";
+		int portNumber = 12345;
 		Socket serviceSocket = null;
 		PrintWriter out = null;
 		BufferedReader in = null;
