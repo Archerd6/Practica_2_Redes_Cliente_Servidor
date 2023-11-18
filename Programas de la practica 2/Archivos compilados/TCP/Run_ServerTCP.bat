@@ -1,0 +1,3 @@
+java ServerTCP
+
+cmd /k

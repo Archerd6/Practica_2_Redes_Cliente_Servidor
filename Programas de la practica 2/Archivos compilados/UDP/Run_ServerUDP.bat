@@ -1,0 +1,3 @@
+java ServerUDP
+
+cmd /k
