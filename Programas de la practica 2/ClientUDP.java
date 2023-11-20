@@ -30,6 +30,8 @@ public class ClientUDP
 			System.exit(1);
 		}
 		
+		System.out.println("STATUS: El puerto (cliente) que se ha usado es: " + serviceSocket.getLocalPort()); // Puerto local
+		
 		/* INICIALIZA ENTRADA POR TECLADO */
 		BufferedReader stdIn = new BufferedReader( new InputStreamReader(System.in));
 		
