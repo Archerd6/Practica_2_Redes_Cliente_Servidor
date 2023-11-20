@@ -35,7 +35,7 @@ class ServerTCP
 				/* COMPLETAR Esperar conexiones entrantes */
 				client = server.accept();
 				System.out.println("Connecting with: " + client.getInetAddress().getHostAddress());
-				System.out.println("port: " + client.getPort());
+				System.out.println("port: " + client.getPort()); // Puerto remoto (del cliente)
 
 			}
 			catch (IOException e)

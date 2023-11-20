@@ -35,6 +35,7 @@ public class ClientTCP
 		}
 		
 		System.out.println("STATUS: Conectado al servidor ");
+		System.out.println("STATUS: El puerto (cliente) que se ha usado es: " + serviceSocket.getLocalPort()); // Puerto local
 		
 		/* Obtener texto por teclado */
 		String userInput;
